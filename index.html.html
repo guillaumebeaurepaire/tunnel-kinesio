@@ -1,0 +1,215 @@
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+.funnel-wrap { padding: 28px 16px 24px; font-family: var(--font-sans); }
+.step { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 0; }
+.step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+.icon-ring { border-radius: 50%; border: 1.5px solid; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.connector { width: 1.5px; flex: 1; min-height: 28px; }
+.step-body { padding-bottom: 32px; flex: 1; }
+.step-label { font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 3px; }
+.step-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+.step-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+.badge { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 10px; border-radius: 20px; margin-top: 8px; }
+.step-sources { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.source-pill { display: flex; align-items: center; gap: 7px; padding: 6px 12px; border-radius: 8px; border: 1px solid; font-size: 12px; font-weight: 500; }
+
+/* Colors per step */
+.c1 { color: #534AB7; border-color: #534AB7; background: #EEEDFE; }
+.c1b { background: #534AB7; }
+.conn1 { background: #AFA9EC; }
+
+.c2 { color: #0F6E56; border-color: #0F6E56; background: #E1F5EE; }
+.c2b { background: #0F6E56; }
+.conn2 { background: #5DCAA5; }
+
+.c3 { color: #0F6E56; border-color: #0F6E56; background: #E1F5EE; }
+.conn3 { background: #5DCAA5; }
+
+.c4 { color: #993C1D; border-color: #993C1D; background: #FAECE7; }
+.c4b { background: #993C1D; }
+.conn4 { background: #F0997B; }
+
+.c5 { color: #854F0B; border-color: #854F0B; background: #FAEEDA; }
+.c5b { background: #854F0B; }
+.conn5 { background: #EF9F27; }
+
+.c6 { color: #3B6D11; border-color: #3B6D11; background: #EAF3DE; }
+.c6b { background: #3B6D11; }
+.conn6 { background: #97C459; }
+
+.c7 { color: #3B6D11; border-color: #3B6D11; background: #EAF3DE; }
+
+@media (prefers-color-scheme: dark) {
+  .c1 { color: #CECBF6; border-color: #534AB7; background: #26215C; }
+  .c2, .c3 { color: #9FE1CB; border-color: #0F6E56; background: #04342C; }
+  .c4 { color: #F5C4B3; border-color: #993C1D; background: #4A1B0C; }
+  .c5 { color: #FAC775; border-color: #854F0B; background: #412402; }
+  .c6, .c7 { color: #C0DD97; border-color: #3B6D11; background: #173404; }
+  .source-pill { border-color: var(--color-border-secondary) !important; background: var(--color-background-secondary) !important; color: var(--color-text-secondary) !important; }
+}
+</style>
+
+<div class="funnel-wrap">
+
+  <!-- ÉTAPE 1 : Trafic -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c1" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          <path d="M11 8v6M8 11h6"/>
+        </svg>
+      </div>
+      <div class="connector conn1"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#534AB7;">Étape 1 — Acquisition</div>
+      <div class="step-title">Génération de trafic ciblé</div>
+      <div class="step-desc">Des patients locaux vous trouvent, que ce soit via la pub ou les recherches Google.</div>
+      <div class="step-sources">
+        <div class="source-pill c1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          Google Ads & SEO
+        </div>
+        <div class="source-pill c1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          Meta Ads
+        </div>
+        <div class="source-pill c1">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          Google My Business
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 2 : Site web -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c2" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2"/>
+          <path d="M8 21h8M12 17v4"/>
+          <path d="M7 8h4M7 11h2"/>
+          <rect x="13" y="7" width="5" height="5" rx="1"/>
+        </svg>
+      </div>
+      <div class="connector conn2"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#0F6E56;">Étape 2 — Conversion</div>
+      <div class="step-title">Site web orienté prise de rendez-vous</div>
+      <div class="step-desc">Design apaisant, témoignages patients, présentation de vos expertises et bouton de réservation bien visible.</div>
+      <div class="badge c2">Preuve sociale · CTA clair · Rassurant</div>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 3 : Agenda -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c3" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="18" rx="2"/>
+          <path d="M16 2v4M8 2v4M3 10h18"/>
+          <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/>
+        </svg>
+      </div>
+      <div class="connector conn3"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#0F6E56;">Étape 3 — Réservation</div>
+      <div class="step-title">Prise de rendez-vous en ligne</div>
+      <div class="step-desc">Agenda synchronisé (Calendly ou équivalent) + rappels SMS & email automatiques avant la séance.</div>
+      <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+        <div class="badge c2">Rappel SMS auto</div>
+        <div class="badge c2">Rappel email auto</div>
+        <div class="badge c2">Zéro "lapin"</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 4 : Confirmation + tracking -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c4" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <path d="m9 11 3 3L22 4"/>
+        </svg>
+      </div>
+      <div class="connector conn4"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#993C1D;">Étape 4 — Confirmation</div>
+      <div class="step-title">Page de confirmation & tracking</div>
+      <div class="step-desc">Le patient voit son rendez-vous confirmé. Un pixel de conversion informe Meta & Google qu'un rendez-vous a bien eu lieu.</div>
+      <div style="display:flex; gap:8px; margin-top:10px; flex-wrap:wrap;">
+        <div class="badge c4">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Pixel Meta
+        </div>
+        <div class="badge c4">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:4px"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          Conversion Google
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 5 : Jour J -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c5" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <div class="connector conn5"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#854F0B;">Étape 5 — Séance</div>
+      <div class="step-title">Jour J — le patient arrive</div>
+      <div class="step-desc">Vous exercez votre métier. Le système a fait tout le reste : attirer, convaincre, rappeler.</div>
+      <div class="badge c5">Agenda plein · Zéro no-show</div>
+    </div>
+  </div>
+
+  <!-- ÉTAPE 6 : Email post-séance -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c6" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+          <path d="m22 6-10 7L2 6"/>
+        </svg>
+      </div>
+      <div class="connector conn6"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-label" style="color:#3B6D11;">Étape 6 — Fidélisation</div>
+      <div class="step-title">Email post-séance automatique</div>
+      <div class="step-desc">Un email part automatiquement après la consultation pour demander un avis Google et remercier le patient.</div>
+      <div class="badge c6">Booste le SEO · Renforce la confiance</div>
+    </div>
+  </div>
+
+  <!-- Résultat final -->
+  <div class="step">
+    <div class="step-left">
+      <div class="icon-ring c7" style="width:52px;height:52px;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+      </div>
+    </div>
+    <div class="step-body" style="padding-bottom:0;">
+      <div class="step-label" style="color:#3B6D11;">Résultat</div>
+      <div class="step-title">Avis Google · Nouveau cycle d'acquisition</div>
+      <div class="step-desc">Les avis renforcent votre fiche Google My Business et boostent votre SEO local — ce qui alimente à nouveau l'étape 1.</div>
+    </div>
+  </div>
+
+</div>
